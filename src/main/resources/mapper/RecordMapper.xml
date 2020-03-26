@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.summer.springboot.mapper.RecordMapper">
+  <resultMap id="BaseResultMap" type="com.summer.springboot.model.Record">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="locpath" jdbcType="VARCHAR" property="locpath" />
+    <result column="netpath" jdbcType="VARCHAR" property="netpath" />
+    <result column="ctime" jdbcType="BIGINT" property="ctime" />
+    <result column="utime" jdbcType="BIGINT" property="utime" />
+    <result column="atype" jdbcType="VARCHAR" property="atype" />
+    <result column="btype" jdbcType="VARCHAR" property="btype" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="duration" jdbcType="BIGINT" property="duration" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="classify" jdbcType="INTEGER" property="classify" />
+    <result column="enable" jdbcType="INTEGER" property="enable" />
+    <result column="parentid" jdbcType="INTEGER" property="parentid" />
+    <result column="ctype" jdbcType="INTEGER" property="ctype" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, locpath, netpath, ctime, utime, atype, btype, address, duration, `name`, content, 
+    classify, `enable`, parentid, ctype, remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from record
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from record
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.summer.springboot.model.Record" useGeneratedKeys="true">
+    insert into record (locpath, netpath, ctime, 
+      utime, atype, btype, 
+      address, duration, `name`, 
+      content, classify, `enable`, 
+      parentid, ctype, remark
+      )
+    values (#{locpath,jdbcType=VARCHAR}, #{netpath,jdbcType=VARCHAR}, #{ctime,jdbcType=BIGINT}, 
+      #{utime,jdbcType=BIGINT}, #{atype,jdbcType=VARCHAR}, #{btype,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{duration,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{classify,jdbcType=INTEGER}, #{enable,jdbcType=INTEGER}, 
+      #{parentid,jdbcType=INTEGER}, #{ctype,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.summer.springboot.model.Record" useGeneratedKeys="true">
+    insert into record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="locpath != null">
+        locpath,
+      </if>
+      <if test="netpath != null">
+        netpath,
+      </if>
+      <if test="ctime != null">
+        ctime,
+      </if>
+      <if test="utime != null">
+        utime,
+      </if>
+      <if test="atype != null">
+        atype,
+      </if>
+      <if test="btype != null">
+        btype,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="duration != null">
+        duration,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="classify != null">
+        classify,
+      </if>
+      <if test="enable != null">
+        `enable`,
+      </if>
+      <if test="parentid != null">
+        parentid,
+      </if>
+      <if test="ctype != null">
+        ctype,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="locpath != null">
+        #{locpath,jdbcType=VARCHAR},
+      </if>
+      <if test="netpath != null">
+        #{netpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null">
+        #{ctime,jdbcType=BIGINT},
+      </if>
+      <if test="utime != null">
+        #{utime,jdbcType=BIGINT},
+      </if>
+      <if test="atype != null">
+        #{atype,jdbcType=VARCHAR},
+      </if>
+      <if test="btype != null">
+        #{btype,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="duration != null">
+        #{duration,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="classify != null">
+        #{classify,jdbcType=INTEGER},
+      </if>
+      <if test="enable != null">
+        #{enable,jdbcType=INTEGER},
+      </if>
+      <if test="parentid != null">
+        #{parentid,jdbcType=INTEGER},
+      </if>
+      <if test="ctype != null">
+        #{ctype,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.summer.springboot.model.Record">
+    update record
+    <set>
+      <if test="locpath != null">
+        locpath = #{locpath,jdbcType=VARCHAR},
+      </if>
+      <if test="netpath != null">
+        netpath = #{netpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null">
+        ctime = #{ctime,jdbcType=BIGINT},
+      </if>
+      <if test="utime != null">
+        utime = #{utime,jdbcType=BIGINT},
+      </if>
+      <if test="atype != null">
+        atype = #{atype,jdbcType=VARCHAR},
+      </if>
+      <if test="btype != null">
+        btype = #{btype,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="duration != null">
+        duration = #{duration,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="classify != null">
+        classify = #{classify,jdbcType=INTEGER},
+      </if>
+      <if test="enable != null">
+        `enable` = #{enable,jdbcType=INTEGER},
+      </if>
+      <if test="parentid != null">
+        parentid = #{parentid,jdbcType=INTEGER},
+      </if>
+      <if test="ctype != null">
+        ctype = #{ctype,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.summer.springboot.model.Record">
+    update record
+    set locpath = #{locpath,jdbcType=VARCHAR},
+      netpath = #{netpath,jdbcType=VARCHAR},
+      ctime = #{ctime,jdbcType=BIGINT},
+      utime = #{utime,jdbcType=BIGINT},
+      atype = #{atype,jdbcType=VARCHAR},
+      btype = #{btype,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      duration = #{duration,jdbcType=BIGINT},
+      `name` = #{name,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=INTEGER},
+      `enable` = #{enable,jdbcType=INTEGER},
+      parentid = #{parentid,jdbcType=INTEGER},
+      ctype = #{ctype,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

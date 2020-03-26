@@ -1,0 +1,74 @@
+2020-03-26 15:34:19.593  INFO 11276 --- [main] c.s.springboot.SpringbootApplication     : Starting SpringbootApplication on DESKTOP-APOVHS1 with PID 11276 (E:\project\server\springboot\build\classes\java\main started by summer in E:\project\server\springboot)
+2020-03-26 15:34:19.595  INFO 11276 --- [main] c.s.springboot.SpringbootApplication     : No active profile set, falling back to default profiles: default
+2020-03-26 15:34:20.398  INFO 11276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-03-26 15:34:20.405  INFO 11276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-26 15:34:20.405  INFO 11276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-26 15:34:20.409  INFO 11276 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-03-26 15:34:20.409  INFO 11276 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-26 15:34:20.409  INFO 11276 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-26 15:34:20.409  INFO 11276 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-26 15:34:20.411  INFO 11276 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-26 15:34:20.479  INFO 11276 --- [main] o.a.c.c.C.[.[localhost].[/springboot]    : Initializing Spring embedded WebApplicationContext
+2020-03-26 15:34:20.479  INFO 11276 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 855 ms
+2020-03-26 15:34:20.912  INFO 11276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 15:34:21.133  INFO 11276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/springboot'
+2020-03-26 15:34:21.135  INFO 11276 --- [main] c.s.springboot.SpringbootApplication     : Started SpringbootApplication in 1.791 seconds (JVM running for 2.274)
+2020-03-26 15:34:33.526  INFO 11276 --- [http-nio-9999-exec-1] o.a.c.c.C.[.[localhost].[/springboot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-26 15:34:33.526  INFO 11276 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-26 15:34:33.533  INFO 11276 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-03-26 15:34:33.553  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : -----------------------------------------start-----------------------------------------------------
+2020-03-26 15:34:33.554  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | URL            : http://222.186.36.75:9999/springboot/record/selectByPrimaryKey
+2020-03-26 15:34:33.554  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | HTTP Method    : GET
+2020-03-26 15:34:33.555  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | Class Method   : com.summer.springboot.controller.RocordController.getRecord
+2020-03-26 15:34:33.556  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | IP             : 180.168.218.122
+2020-03-26 15:34:33.558  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | Request Args   : [1000]
+2020-03-26 15:34:33.572  INFO 11276 --- [http-nio-9999-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-26 15:34:33.656  INFO 11276 --- [http-nio-9999-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-26 15:34:33.684  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | Response Args  : {"id":1000,"locpath":"/storage/emulated/0/news_article/7bbc18110aafac455b2600e30aab8a0a.gif","netpath":"E:\\record\\20190211\\7bbc18110aafac455b2600e30aab8a0a.gif","ctime":1549901341000,"utime":1549901340000,"atype":"image","name":"7bbc18110aafac455b2600e30aab8a0a.gif","enable":1,"ctype":0}
+2020-03-26 15:34:33.684  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : | Time-Consuming : 131 ms
+2020-03-26 15:34:33.685  INFO 11276 --- [http-nio-9999-exec-1] com.summer.springboot.logger.LogAspect   : -------------------------------------------end-----------------------------------------------------
+2020-03-26 15:35:14.972  INFO 932 --- [main] c.s.springboot.SpringbootApplication     : Starting SpringbootApplication on DESKTOP-APOVHS1 with PID 932 (E:\project\server\springboot\build\classes\java\main started by summer in E:\project\server\springboot)
+2020-03-26 15:35:14.974  INFO 932 --- [main] c.s.springboot.SpringbootApplication     : No active profile set, falling back to default profiles: default
+2020-03-26 15:35:15.764  INFO 932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-03-26 15:35:15.770  INFO 932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-26 15:35:15.770  INFO 932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-26 15:35:15.771  INFO 932 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-03-26 15:35:15.772  INFO 932 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-26 15:35:15.772  INFO 932 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-26 15:35:15.772  INFO 932 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-26 15:35:15.774  INFO 932 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-26 15:35:15.841  INFO 932 --- [main] o.a.c.c.C.[.[localhost].[/springboot]    : Initializing Spring embedded WebApplicationContext
+2020-03-26 15:35:15.841  INFO 932 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 839 ms
+2020-03-26 15:35:16.273  INFO 932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 15:35:16.497  INFO 932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/springboot'
+2020-03-26 15:35:16.500  INFO 932 --- [main] c.s.springboot.SpringbootApplication     : Started SpringbootApplication in 1.775 seconds (JVM running for 2.258)
+2020-03-26 15:35:35.239  INFO 3544 --- [main] c.s.springboot.SpringbootApplication     : Starting SpringbootApplication on DESKTOP-APOVHS1 with PID 3544 (E:\project\server\springboot\build\classes\java\main started by summer in E:\project\server\springboot)
+2020-03-26 15:35:35.241  INFO 3544 --- [main] c.s.springboot.SpringbootApplication     : No active profile set, falling back to default profiles: default
+2020-03-26 15:35:36.066  INFO 3544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-03-26 15:35:36.073  INFO 3544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-26 15:35:36.073  INFO 3544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-26 15:35:36.075  INFO 3544 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-03-26 15:35:36.075  INFO 3544 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-26 15:35:36.075  INFO 3544 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-26 15:35:36.075  INFO 3544 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-26 15:35:36.078  INFO 3544 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-26 15:35:36.145  INFO 3544 --- [main] o.a.c.c.C.[.[localhost].[/springboot]    : Initializing Spring embedded WebApplicationContext
+2020-03-26 15:35:36.146  INFO 3544 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 876 ms
+2020-03-26 15:35:36.577  INFO 3544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 15:35:36.799  INFO 3544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/springboot'
+2020-03-26 15:35:36.801  INFO 3544 --- [main] c.s.springboot.SpringbootApplication     : Started SpringbootApplication in 1.81 seconds (JVM running for 2.296)
+2020-03-26 15:36:32.001  INFO 1020 --- [main] c.s.springboot.SpringbootApplication     : Starting SpringbootApplication on DESKTOP-APOVHS1 with PID 1020 (E:\project\server\springboot\build\classes\java\main started by summer in E:\project\server\springboot)
+2020-03-26 15:36:32.003  INFO 1020 --- [main] c.s.springboot.SpringbootApplication     : No active profile set, falling back to default profiles: default
+2020-03-26 15:36:32.794  INFO 1020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-03-26 15:36:32.801  INFO 1020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-26 15:36:32.801  INFO 1020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-26 15:36:32.802  INFO 1020 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-03-26 15:36:32.802  INFO 1020 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-26 15:36:32.802  INFO 1020 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-26 15:36:32.802  INFO 1020 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-26 15:36:32.805  INFO 1020 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-26 15:36:32.871  INFO 1020 --- [main] o.a.c.c.C.[.[localhost].[/springboot]    : Initializing Spring embedded WebApplicationContext
+2020-03-26 15:36:32.871  INFO 1020 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 839 ms
+2020-03-26 15:36:33.305  INFO 1020 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 15:36:33.525  INFO 1020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/springboot'
+2020-03-26 15:36:33.527  INFO 1020 --- [main] c.s.springboot.SpringbootApplication     : Started SpringbootApplication in 1.774 seconds (JVM running for 2.278)
